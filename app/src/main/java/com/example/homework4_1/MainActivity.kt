@@ -9,7 +9,7 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var textViewFA: TextView
+    lateinit var textViewChanged:TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.button_plus)
         val buttonNext = findViewById<Button>(R.id.button_next_activity)
 
-        //var textViewFA = findViewById<TextView>(R.id.textView)
+        var textViewFA = findViewById<TextView>(R.id.textView)
         var number = 0
         textViewFA.text = number.toString()
 
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(intent,1)
         }
 
-        //var textViewChanged = findViewById<TextView>(R.id.textView)
+        var textViewChanged = findViewById<TextView>(R.id.textView)
 
     }
 
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
         if(resultCode == Activity.RESULT_OK && requestCode == 1) {
 
-            textViewFA.text = data?.getStringExtra("text_2")
+            textViewChanged.text = data?.getStringExtra("text_2")
         }
     }
 

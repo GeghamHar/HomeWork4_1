@@ -32,6 +32,7 @@ class SecondActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("text_2", result)
             setResult(Activity.RESULT_OK,intent)
+            finish()
         }
 
     }
